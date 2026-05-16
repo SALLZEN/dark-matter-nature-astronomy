@@ -1,26 +1,3 @@
----
-author: "Simon Allzén"
-title: "Repository"
-subtitle: "_Phenomena, Particles, and the Plurality of Dark Matter_"
-format:
-  html:
-    theme:
-      dark: darkly
-      light: flatly
-    mermaid:
-      theme: dark
-    mainfont: "Fraunces"
-    fontsize: "10pt"
-    code-fold: true
-    code-summary: "Show the code"
-    tabset: true
-    minimal: true
-    max-width: "1600"
-    smooth-scroll: true
-    page-layout: article
-    df-print: kable
----
-
 # Dark Matter Transparency Bundle
 
 This directory is the public transparency bundle for the **Nature Astronomy Analysis** draft, *Phenomena, Particles, and the Plurality of Dark Matter*. It is organized around one canonical pipeline, one retained ADS provenance snapshot, and one canonical set of final figure outputs.
