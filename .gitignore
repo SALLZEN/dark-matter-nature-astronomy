@@ -1,0 +1,66 @@
+.DS_Store
+__pycache__/
+.ipynb_checkpoints/
+.quarto/
+README.html
+README_files/
+code/README.html
+code/README_files/
+docs/repo-map.html
+docs/repo-map_files/
+
+# Python / notebook build noise
+*.pyc
+*.pyo
+
+# R session noise
+.Rhistory
+.RData
+.Rproj.user/
+
+# LaTeX build artefacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+
+# Local scratch outputs
+Rplots.pdf
+missfont.log
+
+# Local-only manuscript and archive material
+archive/
+analysis_production_v2_0.tex
+analysis_production_v2_0.pdf
+NAP_references_draft.bib
+
+# Stage-local outputs: keep only the expensive ADS snapshots from stage 001
+code/stage-outputs/*
+!code/stage-outputs/.gitkeep
+!code/stage-outputs/README.md
+!code/stage-outputs/001-collect-ads-records/
+code/stage-outputs/001-collect-ads-records/*
+!code/stage-outputs/001-collect-ads-records/ads_stage_001_snapshots.zip
+!code/stage-outputs/001a-update-ads-records/
+code/stage-outputs/001a-update-ads-records/*
+!code/stage-outputs/001a-update-ads-records/.gitkeep
+!code/stage-outputs/003-extract-dm-candidates/
+code/stage-outputs/003-extract-dm-candidates/*
+!code/stage-outputs/003-extract-dm-candidates/.gitkeep
+!code/stage-outputs/004-build-lexical-data/
+code/stage-outputs/004-build-lexical-data/*
+!code/stage-outputs/004-build-lexical-data/cache/
+code/stage-outputs/004-build-lexical-data/cache/*
+!code/stage-outputs/004-build-lexical-data/cache/.gitkeep
+!code/stage-outputs/004-build-lexical-data/support/
+code/stage-outputs/004-build-lexical-data/support/*
+!code/stage-outputs/004-build-lexical-data/support/.gitkeep

@@ -1,0 +1,9 @@
+beautifulsoup4
+matplotlib
+numpy
+pandas
+plotly
+pyarrow
+requests
+scikit-learn
+tqdm

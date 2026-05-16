@@ -1,0 +1,6 @@
+*.pdf binary
+*.parquet binary
+*.gz binary
+*.zip binary
+
+docs/repo-map_files/** linguist-vendored

@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the manuscript and this transparency bundle."
+title: "Transparency Bundle for 'Phenomena, Particles, and the Plurality of Dark Matter'"
+type: software
+version: "2.0"
+date-released: 2026-05-16
+authors:
+  - family-names: "Allzén"
+    given-names: "Simon"
+    affiliation: "Stockholm University; University of Amsterdam"
+abstract: >-
+  Public transparency bundle for the Nature Astronomy Analysis draft
+  'Phenomena, Particles, and the Plurality of Dark Matter'. The repository
+  contains a five-stage pipeline for ADS record collection, canonical-data
+  construction, dark-matter candidate extraction, lexical-data construction,
+  and final figure generation.
+keywords:
+  - dark matter
+  - bibliometrics
+  - arXiv
+  - NASA ADS
+  - history and philosophy of physics
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Allzén"
+      given-names: "Simon"
+  title: "Phenomena, Particles, and the Plurality of Dark Matter"
+  journal: "Nature Astronomy"
+  status: "manuscript in preparation"
