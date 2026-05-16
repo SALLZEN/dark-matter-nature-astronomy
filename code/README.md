@@ -1,3 +1,6 @@
+# Repository
+Simon Allzén
+
 ------------------------------------------------------------------------
 
 # Code Pipeline
@@ -37,26 +40,23 @@ Optional maintenance route:
 
 ## Sequence summary
 
-
 ### 001-collect-ads-records.ipynb
 
 <br>
 
 **Purpose:**
 
-  - Query NASA ADS for records containing the phrase `"dark matter"`.
-  - Hydrate missing abstracts.
-  - Fetch citation histories from `v1/metrics/detail` with
+- Query NASA ADS for records containing the phrase `"dark matter"`.
+- Hydrate missing abstracts.
+- Fetch citation histories from `v1/metrics/detail` with
   `types=["citations"]`.
 
+**Writes:**
 
-  **Writes:**
-
-  1.  `stage-outputs/001-collect-ads-records/ads_search_all_years.json`
-  2.  `stage-outputs/001-collect-ads-records/ads_search_all_years_with_abstracts.json`
-  3.  `stage-outputs/001-collect-ads-records/ads_search_all_years_metrics_citations.json`
-  4.  `stage-outputs/001-collect-ads-records/ads_stage_001_snapshots.zip`
-
+1.  `stage-outputs/001-collect-ads-records/ads_search_all_years.json`
+2.  `stage-outputs/001-collect-ads-records/ads_search_all_years_with_abstracts.json`
+3.  `stage-outputs/001-collect-ads-records/ads_search_all_years_metrics_citations.json`
+4.  `stage-outputs/001-collect-ads-records/ads_stage_001_snapshots.zip`
 
 *Public repo note:*
 
@@ -67,17 +67,19 @@ Optional maintenance route:
 
   <br>
 
-  ---
+  ------------------------------------------------------------------------
 
   ##### **$\rightarrow$ 001a-update-ads-records.ipynb**
 
   **Purpose:**
+
   - Update an existing canonical ADS snapshot year by year without
     changing the downstream pipeline.
   - Mirror the collection, hydration, and citation-history logic used by
     `001-collect-ads-records.ipynb`.
 
   **Writes:**
+
   - Staged append outputs under `stage-outputs/001a-update-ads-records/`
 
 <br>
@@ -113,24 +115,23 @@ Optional maintenance route:
 
 <br>
 
-  **Purpose:**
+**Purpose:**
 
-  - Clean abstracts for candidate extraction.
-  - Build the paper-level and candidate-level DM model outputs used by the
+- Clean abstracts for candidate extraction.
+- Build the paper-level and candidate-level DM model outputs used by the
   manuscript figures.
 
+**Reads:**
 
-  **Reads:**
+1.  `../data/papers.parquet`
+2.  `../data/paper_arxiv_classes.parquet`
 
-  1.  `../data/papers.parquet`
-  2.  `../data/paper_arxiv_classes.parquet`
+**Writes:**
 
-  **Writes:**
-
-  1.  `../data/papers_with_dm_models.parquet`
-  2.  `../data/dm_model_candidates_long.parquet`
-  3.  `stage-outputs/003-extract-dm-candidates/dm_model_mentions.parquet`
-  4.  `stage-outputs/003-extract-dm-candidates/dm_model_counts_by_year.parquet`
+1.  `../data/papers_with_dm_models.parquet`
+2.  `../data/dm_model_candidates_long.parquet`
+3.  `stage-outputs/003-extract-dm-candidates/dm_model_mentions.parquet`
+4.  `stage-outputs/003-extract-dm-candidates/dm_model_counts_by_year.parquet`
 
 *Public repo note:*
 
@@ -145,35 +146,32 @@ Optional maintenance route:
 
 <br>
 
-  **Purpose:**
+**Purpose:**
 
-  1.  Build the cleaned abstract corpus for lexical comparison.
-  2.  Produce support TF-IDF and keyness tables.
-  3.  Write the canonical yearly unigram parquet used by the manuscript
-  figure pipeline.
+1.  Build the cleaned abstract corpus for lexical comparison.
+2.  Produce support TF-IDF and keyness tables.
+3.  Write the canonical yearly unigram parquet used by the manuscript
+    figure pipeline.
 
+**Reads:**
 
-  **Reads:**
+1.  `../data/papers.parquet`
+2.  `../data/paper_arxiv_classes.parquet`
 
-  1.  `../data/papers.parquet`
-  2.  `../data/paper_arxiv_classes.parquet`
+**Writes:**
 
-  **Writes:**
-
-  1.  `../data/unigram_yearly.parquet`
-  2.  support outputs under
-      `stage-outputs/004-build-lexical-data/support/`
-  3.  cached cleaned corpus under
-      `stage-outputs/004-build-lexical-data/cache/`
+1.  `../data/unigram_yearly.parquet`
+2.  support outputs under
+    `stage-outputs/004-build-lexical-data/support/`
+3.  cached cleaned corpus under
+    `stage-outputs/004-build-lexical-data/cache/`
 
 *Public repo note:*
 
-- The support CSV/parquet files and lexical caches are
-local/regenerable and are not tracked in the public bundle.
+- The support CSV/parquet files and lexical caches are local/regenerable
+  and are not tracked in the public bundle.
 
-<br>
-<br>
-
+<br> <br>
 
 ## Shared helpers
 
@@ -198,7 +196,6 @@ The notebooks expect a Python environment with:
 - `requests`
 - `scikit-learn`
 - `tqdm`
-
 
 ##### R
 

@@ -1,22 +1,26 @@
+# Repository
+Simon Allzén
+
 ## Repo Map
 
-This document gives a structural and process-level map of the `dark-matter-nature-astronomy` transparency bundle.
-
-
-
+This document gives a structural and process-level map of the
+`dark-matter-nature-astronomy` transparency bundle.
 
 ## At a Glance
 
 The repo is organized around three ideas:
 
 - `code/` contains the canonical pipeline stages and shared code.
-- `data/` contains the canonical shared artifacts that downstream stages may rely on.
-- `code/stage-outputs/` contains stage-local caches, audit tables, and support exports that are useful for inspection but are not part of the canonical shared contract. In the public repository, only the retained stage-001 ADS snapshot archive is kept there by default.
-
+- `data/` contains the canonical shared artifacts that downstream stages
+  may rely on.
+- `code/stage-outputs/` contains stage-local caches, audit tables, and
+  support exports that are useful for inspection but are not part of the
+  canonical shared contract. In the public repository, only the retained
+  stage-001 ADS snapshot archive is kept there by default.
 
 ## Repository Structure
 
-```text
+``` {text}
 dark-matter-nature-astronomy/
 ├── .editorconfig
 ├── .gitattributes
@@ -78,14 +82,12 @@ dark-matter-nature-astronomy/
     └── rendered Markdown is generated from repo-map.qmd for GitHub display
 ```
 
-
-
 ## Structure Chart
 
-The first chart shows the major top-level zones. The second opens up `code/` so the stage layout is easier to read.
+The first chart shows the major top-level zones. The second opens up
+`code/` so the stage layout is easier to read.
 
-
-```mermaid
+``` mermaid
 
 
 flowchart LR
@@ -97,18 +99,18 @@ flowchart LR
     R ---> DOC["docs/"]
     R ---> META["repo metadata"]
     R ----> D["data/"]
-
+    
     C --> SH["shared/"]
     C --> TF["tfidf/"]
     C --> SO["stage-outputs/"]
     C ----> SC
-
+    
     SH ---> SHA
-
+  
     style SC fill:none,stroke-width:2px,stroke-dasharray: 5 5
     style SHA fill:none,stroke-width:2px, stroke-dasharray: 5 5
     style DATA fill:none,stroke-width:2px, stroke-dasharray: 5 5
-
+   
       subgraph SC["scripts and notebook"]
         direction TB
         P1["001 Collect ADS records"] --> P2["002 Build canonical data"]
@@ -116,14 +118,14 @@ flowchart LR
         P3 --> P4["004 Build lexical data"]
         P4 --> P5["005 Build paper assets"]
       end
-
-
+    
+    
       subgraph SHA["shared/"]
       direction TB
           SH1["ads_api.py"] ~~~ SH2["normalization.py"]
           SH2 ~~~ SH3["project_paths.py"]
       end
-
+        
     TF --> TF1["preproc_utils.py"]
     TF --> TF2["tfidf_config.json"]
     TF --> TF3["final_stopwords.txt"]
@@ -148,7 +150,7 @@ flowchart LR
         D4 ~~~ D5
         D5 ~~~ D6
       end
-
+      
     F --> F1["final figure PDFs"]
     T --> T1["table_model_terms.tex"]
     DOC --> DOC1["repo-map.qmd / repo-map.md"]
@@ -157,13 +159,9 @@ flowchart LR
 
 <br>
 
-
-
-
-
 ## Canonical Process Flow
 
-```mermaid
+``` mermaid
 flowchart LR
     S1["001-collect-ads-records.ipynb"] --> O1["stage-outputs/001-collect-ads-records/<br/>retained zip archive with<br/>hydrated-records JSON<br/>and citation-metrics JSON"]
 
@@ -196,14 +194,19 @@ flowchart LR
     S5 --> T1["tables/table_model_terms.tex"]
 ```
 
----
-
+------------------------------------------------------------------------
 
 ### Interpretation Guide
 
 - If a file is in `data/`, a later stage is allowed to depend on it.
-- In the public repository, `data/` starts mostly empty and is populated locally by the pipeline.
-- If a file is in `code/stage-outputs/`, it is useful for inspection or caching, but should not become a hidden dependency of a later stage.
-- In the public repository, the only tracked stage-output data are the retained stage-001 ADS snapshot archive and its README/.gitkeep scaffolding.
-- `figures/` contains the final figure PDFs included in the transparency bundle.
-- `tables/` contains the generated table fragment used to summarize candidate terms.
+- In the public repository, `data/` starts mostly empty and is populated
+  locally by the pipeline.
+- If a file is in `code/stage-outputs/`, it is useful for inspection or
+  caching, but should not become a hidden dependency of a later stage.
+- In the public repository, the only tracked stage-output data are the
+  retained stage-001 ADS snapshot archive and its README/.gitkeep
+  scaffolding.
+- `figures/` contains the final figure PDFs included in the transparency
+  bundle.
+- `tables/` contains the generated table fragment used to summarize
+  candidate terms.

@@ -1,25 +1,5 @@
----
-author: "Simon Allzén"
-title: "Repository"
-subtitle: "_Phenomena, Particles, and the Plurality of Dark Matter_"
-format:
-  html:
-    theme:
-      dark: darkly
-      light: flatly
-    mermaid:
-      theme: dark
-    mainfont: "Fraunces"
-    fontsize: "10pt"
-    code-fold: true
-    code-summary: "Show the code"
-    tabset: true
-    minimal: true
-    max-width: "1600"
-    smooth-scroll: true
-    page-layout: article
-    df-print: kable
----
+# Repository
+Simon Allzén
 
 # Dark Matter Transparency Bundle
 
@@ -31,11 +11,11 @@ outputs.
 
 ## Canonical pipeline
 
-1. `code/001-collect-ads-records.ipynb`
-2. `code/002-build-canonical-data.R`
-3. `code/003-extract-dm-candidates.ipynb`
-4. `code/004-build-lexical-data.ipynb`
-5. `code/005-build-paper-assets.R`
+1.  `code/001-collect-ads-records.ipynb`
+2.  `code/002-build-canonical-data.R`
+3.  `code/003-extract-dm-candidates.ipynb`
+4.  `code/004-build-lexical-data.ipynb`
+5.  `code/005-build-paper-assets.R`
 
 Optional maintenance route:
 
@@ -48,9 +28,8 @@ The intended flow is:
 - ADS JSON retrieval and citation histories are written under
   `code/stage-outputs/001-collect-ads-records/`.
 - In the public repo, the costly retained ADS snapshot is packaged as
-  one zip archive under
-  `code/stage-outputs/001-collect-ads-records/`; extract it before
-  running `002-build-canonical-data.R`.
+  one zip archive under `code/stage-outputs/001-collect-ads-records/`;
+  extract it before running `002-build-canonical-data.R`.
 - `002-build-canonical-data.R` converts those JSON files into canonical
   parquets in `data/`.
 - `003-extract-dm-candidates.ipynb` adds candidate-model outputs needed
@@ -76,9 +55,8 @@ The intended flow is:
 
 - This public repository is about computational and methodological
   transparency.
-- It contains the code, retained ADS snapshot, generated table
-  fragment, and final figure outputs needed to inspect and reproduce the
-  analysis.
+- It contains the code, retained ADS snapshot, generated table fragment,
+  and final figure outputs needed to inspect and reproduce the analysis.
 - The retained ADS provenance snapshot is distributed as a zip archive
   containing a hydrated-records JSON and a citation-metrics JSON.
 - The manuscript source, manuscript PDF, and bibliography are
@@ -100,8 +78,7 @@ Before public release, add:
 
 - Repo map and process chart source of truth:
   [docs/repo-map.qmd](docs/repo-map.qmd)
-- GitHub-facing rendered Markdown:
-  [docs/repo-map.md](docs/repo-map.md)
+- GitHub-facing rendered Markdown: [docs/repo-map.md](docs/repo-map.md)
 - Regenerate the GitHub-facing Markdown files from the Quarto sources
   with `./render-docs.sh`
 
@@ -109,7 +86,7 @@ Before public release, add:
 
 If the curated `data/` files are already present, run:
 
-```bash
+``` bash
 Rscript code/005-build-paper-assets.R
 ```
 
