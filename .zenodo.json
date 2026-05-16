@@ -1,0 +1,29 @@
+{
+  "title": "Transparency Bundle for 'Phenomena, Particles, and the Plurality of Dark Matter'",
+  "upload_type": "software",
+  "publication_date": "2026-05-16",
+  "description": "Public transparency bundle for the Nature Astronomy Analysis draft 'Phenomena, Particles, and the Plurality of Dark Matter'. The repository contains a five-stage pipeline for ADS record collection, canonical-data construction, dark-matter candidate extraction, lexical-data construction, and final figure generation.",
+  "creators": [
+    {
+      "name": "Allzén, Simon",
+      "affiliation": "Stockholm University; University of Amsterdam"
+    }
+  ],
+  "keywords": [
+    "dark matter",
+    "bibliometrics",
+    "arXiv",
+    "NASA ADS",
+    "history and philosophy of physics"
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "version": "2.0",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/SALLZEN/dark-matter-nature-astronomy",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

@@ -4,6 +4,9 @@ title: "Transparency Bundle for 'Phenomena, Particles, and the Plurality of Dark
 type: software
 version: "2.0"
 date-released: 2026-05-16
+license: "MIT"
+repository-code: "https://github.com/SALLZEN/dark-matter-nature-astronomy"
+url: "https://github.com/SALLZEN/dark-matter-nature-astronomy"
 authors:
   - family-names: "Allzén"
     given-names: "Simon"

@@ -87,14 +87,11 @@ The intended flow is:
 ## Repository metadata
 
 - Citation metadata: [CITATION.cff](CITATION.cff)
+- Zenodo archival metadata: [.zenodo.json](.zenodo.json)
 - Repository license: [LICENSE](LICENSE)
 - Git line-ending and binary-file rules:
   [.gitattributes](.gitattributes)
 - Git ignore rules: [.gitignore](.gitignore)
-
-Before public release, add:
-
-- the final repository URL and archival DOI to `CITATION.cff`
 
 ## Orientation
 
