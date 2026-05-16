@@ -1,6 +1,8 @@
 # Canonical Data Files
 
-This directory contains the canonical machine-readable artifacts used by the manuscript pipeline.
+This directory is the local target for the canonical machine-readable artifacts used by the manuscript pipeline.
+
+In the public GitHub repository, these generated data files are not tracked by default. They are rebuilt locally from the retained stage-001 ADS snapshot.
 
 ## Canonical inputs for `code/005-build-paper-assets.R`
 

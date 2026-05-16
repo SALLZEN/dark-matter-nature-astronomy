@@ -1,33 +1,3 @@
----
-author: "Simon Allzén"
-title: "Repository"
-subtitle: "_Phenomena, Particles, and the Plurality of Dark Matter_"
-
-format:
-  html:
-    theme:
-      dark: darkly
-      light: flatly
-
-    mainfont: "Fraunces"
-    fontsize: "10pt"
-
-    code-fold: true
-    code-summary: "Show the code"
-    tabset: true
-    minimal: true
-    max-width: "1600"
-    smooth-scroll: true
-    page-layout: article
-    df-print: kable
-
-    mermaid:
-      theme: neutral
----
-
-
-
-
 ## Repo Map
 
 This document gives a structural and process-level map of the `dark-matter-nature-astronomy` transparency bundle.
@@ -46,7 +16,7 @@ The repo is organized around three ideas:
 
 ## Repository Structure
 
-```{text}
+```text
 dark-matter-nature-astronomy/
 ├── .editorconfig
 ├── .gitattributes
@@ -115,7 +85,7 @@ dark-matter-nature-astronomy/
 The first chart shows the major top-level zones. The second opens up `code/` so the stage layout is easier to read.
 
 
-```{mermaid}
+```mermaid
 
 
 flowchart LR
@@ -127,18 +97,18 @@ flowchart LR
     R ---> DOC["docs/"]
     R ---> META["repo metadata"]
     R ----> D["data/"]
-    
+
     C --> SH["shared/"]
     C --> TF["tfidf/"]
     C --> SO["stage-outputs/"]
     C ----> SC
-    
+
     SH ---> SHA
-  
+
     style SC fill:none,stroke-width:2px,stroke-dasharray: 5 5
     style SHA fill:none,stroke-width:2px, stroke-dasharray: 5 5
     style DATA fill:none,stroke-width:2px, stroke-dasharray: 5 5
-   
+
       subgraph SC["scripts and notebook"]
         direction TB
         P1["001 Collect ADS records"] --> P2["002 Build canonical data"]
@@ -146,14 +116,14 @@ flowchart LR
         P3 --> P4["004 Build lexical data"]
         P4 --> P5["005 Build paper assets"]
       end
-    
-    
+
+
       subgraph SHA["shared/"]
       direction TB
           SH1["ads_api.py"] ~~~ SH2["normalization.py"]
           SH2 ~~~ SH3["project_paths.py"]
       end
-        
+
     TF --> TF1["preproc_utils.py"]
     TF --> TF2["tfidf_config.json"]
     TF --> TF3["final_stopwords.txt"]
@@ -178,7 +148,7 @@ flowchart LR
         D4 ~~~ D5
         D5 ~~~ D6
       end
-      
+
     F --> F1["final figure PDFs"]
     T --> T1["table_model_terms.tex"]
     DOC --> DOC1["repo-map.qmd / repo-map.md"]
@@ -193,7 +163,7 @@ flowchart LR
 
 ## Canonical Process Flow
 
-```{mermaid}
+```mermaid
 flowchart LR
     S1["001-collect-ads-records.ipynb"] --> O1["stage-outputs/001-collect-ads-records/<br/>retained zip archive with<br/>hydrated-records JSON<br/>and citation-metrics JSON"]
 

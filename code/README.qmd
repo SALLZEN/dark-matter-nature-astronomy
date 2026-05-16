@@ -1,3 +1,29 @@
+---
+author: "Simon Allzén"
+title: "Repository"
+subtitle: "_Phenomena, Particles, and the Plurality of Dark Matter_"
+format:
+  html:
+    theme:
+      dark: darkly
+      light: flatly
+    mermaid:
+      theme: dark
+    mainfont: "Fraunces"
+    fontsize: "10pt"
+    code-fold: true
+    code-summary: "Show the code"
+    tabset: true
+    minimal: true
+    max-width: "1600"
+    smooth-scroll: true
+    page-layout: article
+    df-print: kable
+editor:
+  markdown:
+    wrap: 72
+---
+
 ------------------------------------------------------------------------
 
 # Code Pipeline
@@ -32,7 +58,7 @@ Optional maintenance route:
   `stage-outputs/001a-update-ads-records/`, and is useful when you want
   to append a new year without rebuilding the entire ADS snapshot from
   scratch.
-
+  
 <br>
 
 ## Sequence summary
@@ -64,9 +90,9 @@ Optional maintenance route:
   records JSON and the citation-metrics JSON - the extracted JSONs and
   the raw `ads_search_all_years.json` snapshot are local-only and can be
   regenerated
-
+  
   <br>
-
+  
   ---
 
   ##### **$\rightarrow$ 001a-update-ads-records.ipynb**
@@ -114,12 +140,12 @@ Optional maintenance route:
 <br>
 
   **Purpose:**
-
+  
   - Clean abstracts for candidate extraction.
   - Build the paper-level and candidate-level DM model outputs used by the
   manuscript figures.
 
-
+  
   **Reads:**
 
   1.  `../data/papers.parquet`
@@ -146,7 +172,7 @@ Optional maintenance route:
 <br>
 
   **Purpose:**
-
+  
   1.  Build the cleaned abstract corpus for lexical comparison.
   2.  Produce support TF-IDF and keyness tables.
   3.  Write the canonical yearly unigram parquet used by the manuscript
@@ -154,7 +180,7 @@ Optional maintenance route:
 
 
   **Reads:**
-
+  
   1.  `../data/papers.parquet`
   2.  `../data/paper_arxiv_classes.parquet`
 
@@ -166,7 +192,7 @@ Optional maintenance route:
   3.  cached cleaned corpus under
       `stage-outputs/004-build-lexical-data/cache/`
 
-*Public repo note:*
+*Public repo note:* 
 
 - The support CSV/parquet files and lexical caches are
 local/regenerable and are not tracked in the public bundle.
