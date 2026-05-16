@@ -7,6 +7,7 @@ date-released: 2026-05-16
 license: "MIT"
 repository-code: "https://github.com/SALLZEN/dark-matter-nature-astronomy"
 url: "https://github.com/SALLZEN/dark-matter-nature-astronomy"
+doi: "10.5281/zenodo.20241726"
 authors:
   - family-names: "Allzén"
     given-names: "Simon"

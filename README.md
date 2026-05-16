@@ -3,6 +3,8 @@ Simon Allzén
 
 # Dark Matter Transparency Bundle
 
+[![DOI](https://zenodo.org/badge/1240854446.svg)](https://doi.org/10.5281/zenodo.20241725)
+
 This directory is the public transparency bundle for the **Nature
 Astronomy Analysis** draft, *Phenomena, Particles, and the Plurality of
 Dark Matter*. It is organized around one canonical pipeline, one
@@ -66,6 +68,8 @@ The intended flow is:
 
 - Citation metadata: [CITATION.cff](CITATION.cff)
 - Zenodo archival metadata: [.zenodo.json](.zenodo.json)
+- Archived submission release DOI:
+  [10.5281/zenodo.20241726](https://doi.org/10.5281/zenodo.20241726)
 - Repository license: [LICENSE](LICENSE)
 - Git line-ending and binary-file rules:
   [.gitattributes](.gitattributes)
